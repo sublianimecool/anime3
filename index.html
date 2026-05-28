@@ -28,11 +28,16 @@
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
   body {
     background: var(--ink);
     font-family: 'Nunito', sans-serif;
     color: var(--text);
-    overflow-x: hidden;
   }
 
   /* ── FLOATING KANJI BG ── */
@@ -89,6 +94,7 @@
     justify-content: center;
     padding: 50px 0 40px;
     position: relative;
+    overflow: hidden;
   }
 
   /* glow orbs */
@@ -262,6 +268,7 @@
   .s-section {
     padding: 60px 0;
     position: relative;
+    overflow: hidden;
   }
 
   .sec-eyebrow {
@@ -531,6 +538,7 @@
   .oferta-wrap {
     padding: 20px 0;
     position: relative;
+    overflow: hidden;
   }
   .oferta-inner {
     max-width: 500px; margin: 0 auto;
@@ -775,6 +783,7 @@
   .car-wrap {
     max-width: 500px; margin: 0 auto;
     padding: 60px 16px;
+    overflow: hidden;
   }
   .car-header { text-align: center; margin-bottom: 30px; }
   .car-eyebrow {
@@ -918,8 +927,8 @@
     width: 100%; max-width: 380px;
     background: linear-gradient(135deg, var(--accent), var(--accent2));
     color: #fff; font-family: 'Nunito', sans-serif; font-weight: 900;
-    font-size: clamp(12px, 3.5vw, 14px); text-transform: uppercase; letter-spacing: 0.5px;
-    padding: 12px 16px; border-radius: 50px;
+    font-size: clamp(11px, 3.2vw, 13.5px); text-transform: uppercase; letter-spacing: 0.2px;
+    padding: 12px 10px; border-radius: 50px;
     text-decoration: none; border: none; cursor: pointer;
     box-shadow: 0 4px 24px rgba(123,47,255,.5);
     text-align: center;
@@ -1035,7 +1044,7 @@
           </div>
           <span class="dolor-num">01</span>
         </div>
-        <p class="dolor-text"><strong>Horas perdidas buscando en Google:</strong> Pasas toda la tarde buscando imágenes gratis para terminar con diseños repetidos, pixelados y con marcas de agua que arruinan tu trabajo.</p>
+        <p class="dolor-text"><strong>Horas buscando en Google:</strong> Pierdes toda la tarde buscando imágenes gratis y terminas con diseños pixelados que arruinan tu trabajo.</p>
       </div>
 
       <div class="dolor-item">
@@ -1045,7 +1054,7 @@
           </div>
           <span class="dolor-num">02</span>
         </div>
-        <p class="dolor-text"><strong>Suscripciones caras que no sirven:</strong> Pagas membresías mensuales en plataformas genéricas que no tienen los personajes específicos de anime que tus clientes realmente te piden.</p>
+        <p class="dolor-text"><strong>Suscripciones inútiles:</strong> Pagas mensualidades en plataformas de diseño genéricas que no tienen los personajes de anime que tus clientes te piden.</p>
       </div>
 
       <div class="dolor-item">
@@ -1055,7 +1064,7 @@
           </div>
           <span class="dolor-num">03</span>
         </div>
-        <p class="dolor-text"><strong>Perder ventas frente a tu competencia:</strong> Tener que decirle a un cliente "no tengo ese diseño" cuando te pide una serie en tendencia, regalando tu ganancia a otro negocio.</p>
+        <p class="dolor-text"><strong>Pérdida de clientes:</strong> Tienes que decir "no lo tengo" ante un pedido en tendencia y ves cómo el cliente se va directo con tu competencia.</p>
       </div>
 
       <div class="dolor-item">
@@ -1065,7 +1074,7 @@
           </div>
           <span class="dolor-num">04</span>
         </div>
-        <p class="dolor-text"><strong>Pérdida de material y clientes enojados:</strong> Estampar un diseño de baja resolución que queda borroso en la taza o camiseta. Pierdes el insumo, tu dinero y te ganas una mala reseña.</p>
+        <p class="dolor-text"><strong>Material y dinero tirados:</strong> Estampas imágenes borrosas que el cliente rechaza. Pierdes el insumo limpio, tu tiempo y te ganas una mala reseña.</p>
       </div>
     </div>
 
