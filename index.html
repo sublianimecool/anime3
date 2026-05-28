@@ -434,8 +434,8 @@
   ══════════════════════════════ */
   .land-cta {
     display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-    background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
-    color: #fff;
+    background: linear-gradient(135deg, #B8FF00 0%, #7FFF00 100%);
+    color: #0D0D1A;
     font-family: 'Nunito', sans-serif;
     font-weight: 900;
     font-size: clamp(14px, 4vw, 17px);
@@ -445,15 +445,15 @@
     border-radius: 50px;
     text-decoration: none;
     border: none; cursor: pointer;
-    box-shadow: 0 6px 28px rgba(123,47,255,.5), 0 0 40px rgba(255,60,172,.25);
+    box-shadow: 0 0 20px rgba(184, 255, 0, 0.4), 0 0 40px rgba(184, 255, 0, 0.2);
     animation: ctaPulse 2.2s ease-in-out infinite;
     transition: box-shadow .25s, transform .15s;
   }
   @keyframes ctaPulse {
-    0%,100% { transform: scale(1); box-shadow: 0 6px 28px rgba(123,47,255,.5), 0 0 40px rgba(255,60,172,.25); }
-    50%     { transform: scale(1.035); box-shadow: 0 8px 36px rgba(123,47,255,.7), 0 0 60px rgba(255,60,172,.35); }
+    0%,100% { transform: scale(1); box-shadow: 0 0 20px rgba(184, 255, 0, 0.4), 0 0 40px rgba(184, 255, 0, 0.2); }
+    50%     { transform: scale(1.035); box-shadow: 0 0 30px rgba(184, 255, 0, 0.7), 0 0 50px rgba(184, 255, 0, 0.4); }
   }
-  .land-cta:hover { animation: none; transform: translateY(-3px); box-shadow: 0 12px 44px rgba(123,47,255,.7); text-decoration: none; }
+  .land-cta:hover { animation: none; transform: translateY(-3px); box-shadow: 0 0 30px rgba(184, 255, 0, 0.6); text-decoration: none; }
   .land-cta-block { display: block; width: 100%; text-align: center; }
 
   /* ══════════════════════════════
@@ -728,24 +728,24 @@
   .oferta-cta {
     display: flex; align-items: center; justify-content: center; gap: 10px;
     width: 100%;
-    background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
-    color: #fff;
+    background: linear-gradient(135deg, #B8FF00 0%, #7FFF00 100%);
+    color: #0D0D1A;
     font-family: 'Nunito', sans-serif;
     font-weight: 900; font-size: clamp(15px, 4.5vw, 18px);
     text-transform: uppercase; letter-spacing: 1.5px;
     padding: 18px 24px; border-radius: 50px;
     text-decoration: none; border: none; cursor: pointer;
-    box-shadow: 0 8px 32px rgba(123,47,255,.55), 0 0 50px rgba(255,60,172,.25);
+    box-shadow: 0 0 20px rgba(184, 255, 0, 0.4), 0 0 40px rgba(184, 255, 0, 0.2);
     animation: ctaPulse 2.2s ease-in-out infinite;
     transition: box-shadow .25s, transform .15s;
   }
-  .oferta-cta:hover { animation: none; transform: translateY(-3px); box-shadow: 0 14px 48px rgba(123,47,255,.75); text-decoration: none; }
+  .oferta-cta:hover { animation: none; transform: translateY(-3px); box-shadow: 0 0 30px rgba(184, 255, 0, 0.6); text-decoration: none; }
   .oferta-cta-arrow {
     width: 28px; height: 28px; border-radius: 50%;
-    background: rgba(255,255,255,.15);
+    background: rgba(13,13,26,.15);
     display: flex; align-items: center; justify-content: center; flex-shrink: 0;
   }
-  .oferta-cta-arrow svg { width: 14px; height: 14px; stroke: #fff; fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+  .oferta-cta-arrow svg { width: 14px; height: 14px; stroke: #0D0D1A; fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
 
   /* garantia */
   .oferta-garantia {
@@ -951,14 +951,15 @@
   .sticky-bar__cta {
     display: flex; align-items: center; justify-content: center; gap: 6px;
     width: 100%; max-width: 380px;
-    background: linear-gradient(135deg, var(--accent), var(--accent2));
-    color: #fff; font-family: 'Nunito', sans-serif; font-weight: 900;
+    background: linear-gradient(135deg, #B8FF00 0%, #7FFF00 100%);
+    color: #0D0D1A; font-family: 'Nunito', sans-serif; font-weight: 900;
     font-size: clamp(11px, 3.2vw, 13.5px); text-transform: uppercase; letter-spacing: 0.2px;
     padding: 12px 10px; border-radius: 50px;
     text-decoration: none; border: none; cursor: pointer;
-    box-shadow: 0 4px 24px rgba(123,47,255,.5);
+    box-shadow: 0 0 15px rgba(184, 255, 0, 0.4);
     text-align: center;
     box-sizing: border-box;
+    animation: ctaPulse 2.2s ease-in-out infinite;
   }
 
   /* spacer for sticky bar */
@@ -1468,16 +1469,15 @@
       <!-- BONO 1 -->
       <div class="car-card">
         <div class="car-card__img">
-          <!-- <img src="BONO1.jpg" alt="Bono 1"> -->
-          <div class="car-card__img-placeholder"><span>📋</span></div>
+          <div class="car-card__img-placeholder"><span>📈</span></div>
           <div class="car-card__badge">Bono 1</div>
           <div class="car-card__heart">🤍</div>
         </div>
         <div class="car-card__body">
-          <div class="car-card__name">Guía de Series Más Vendidas 2025</div>
-          <div class="car-card__sub">Qué pedir tu cliente antes de que lo pida</div>
+          <div class="car-card__name">Diagnóstico de tu negocio de sublimación</div>
+          <div class="car-card__sub">Detecta errores en tus procesos, optimiza tu tiempo y aumenta tus márgenes de ganancia</div>
           <div class="car-card__precio">
-            <span class="car-card__precio-antes">12,00 USD</span>
+            <span class="car-card__precio-antes">9,00 USD</span>
             <span class="car-card__precio-gratis">HOY GRATIS 🎁</span>
           </div>
         </div>
@@ -1486,15 +1486,15 @@
       <!-- BONO 2 -->
       <div class="car-card">
         <div class="car-card__img">
-          <div class="car-card__img-placeholder"><span>⚙️</span></div>
+          <div class="car-card__img-placeholder"><span>📱</span></div>
           <div class="car-card__badge">Bono 2</div>
           <div class="car-card__heart">🤍</div>
         </div>
         <div class="car-card__body">
-          <div class="car-card__name">Configuración Perfecta para Sublimar</div>
-          <div class="car-card__sub">Temperaturas, tiempos y materiales</div>
+          <div class="car-card__name">Catálogo digital para WhatsApp</div>
+          <div class="car-card__sub">Muestra todos tus diseños a clientes al instante de forma profesional</div>
           <div class="car-card__precio">
-            <span class="car-card__precio-antes">9,00 USD</span>
+            <span class="car-card__precio-antes">15,00 USD</span>
             <span class="car-card__precio-gratis">HOY GRATIS 🎁</span>
           </div>
         </div>
@@ -1503,66 +1503,32 @@
       <!-- BONO 3 -->
       <div class="car-card">
         <div class="car-card__img">
-          <div class="car-card__img-placeholder"><span>📱</span></div>
+          <div class="car-card__img-placeholder"><span>🖼️</span></div>
           <div class="car-card__badge">Bono 3</div>
           <div class="car-card__heart">🤍</div>
         </div>
         <div class="car-card__body">
-          <div class="car-card__name">Pack Frases para Redes Sociales</div>
-          <div class="car-card__sub">Publica y atrae clientes desde el día 1</div>
+          <div class="car-card__name">Mockups listos para publicar</div>
+          <div class="car-card__sub">Imágenes listas para tus redes para vender sin haber estampado todavía</div>
           <div class="car-card__precio">
-            <span class="car-card__precio-antes">15,00 USD</span>
+            <span class="car-card__precio-antes">12,00 USD</span>
             <span class="car-card__precio-gratis">HOY GRATIS 🎁</span>
           </div>
         </div>
       </div>
 
-      <!-- BONO 4 -->
-      <div class="car-card">
-        <div class="car-card__img">
-          <div class="car-card__img-placeholder"><span>💰</span></div>
-          <div class="car-card__badge">Bono 4</div>
-          <div class="car-card__heart">🤍</div>
-        </div>
-        <div class="car-card__body">
-          <div class="car-card__name">Calculadora de Precios y Ganancia</div>
-          <div class="car-card__sub">Sabe exactamente cuánto cobrar</div>
-          <div class="car-card__precio">
-            <span class="car-card__precio-antes">10,00 USD</span>
-            <span class="car-card__precio-gratis">HOY GRATIS 🎁</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- BONO 5 -->
-      <div class="car-card">
-        <div class="car-card__img">
-          <div class="car-card__img-placeholder"><span>🎯</span></div>
-          <div class="car-card__badge">Bono 5</div>
-          <div class="car-card__heart">🤍</div>
-        </div>
-        <div class="car-card__body">
-          <div class="car-card__name">Catálogo para WhatsApp y Tienda</div>
-          <div class="car-card__sub">Muestra tu catálogo de forma profesional</div>
-          <div class="car-card__precio">
-            <span class="car-card__precio-antes">14,00 USD</span>
-            <span class="car-card__precio-gratis">HOY GRATIS 🎁</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- BONO SORPRESA -->
+      <!-- BONO SORPRESA (BONO 4) -->
       <div class="car-card car-card--sorpresa">
         <div class="car-card__img car-card__img--sorpresa">
           <div class="sorpresa-inner">
             <div class="sorpresa-emoji">🎁</div>
             <div class="sorpresa-tag">Solo por hoy</div>
           </div>
-          <div class="car-card__badge">Bono 6</div>
+          <div class="car-card__badge">Bono 4</div>
         </div>
         <div class="car-card__body">
           <div class="car-card__name">Bono Sorpresa Exclusivo</div>
-          <div class="car-card__sub">Se revela al completar tu compra</div>
+          <div class="car-card__sub">Se revela al completar tu compra y te ayudará a multiplicar tus ventas</div>
           <div class="car-card__precio">
             <span class="car-card__precio-antes">19,00 USD</span>
             <span class="car-card__precio-gratis">HOY GRATIS 🎁</span>
@@ -1572,8 +1538,8 @@
     </div>
 
     <div class="car-resumen">
-      <p class="car-resumen__label">Valor total de los 6 bonos:</p>
-      <span class="car-resumen__valor-antes">79,00 USD</span>
+      <p class="car-resumen__label">Valor total de los 4 bonos:</p>
+      <span class="car-resumen__valor-antes">55,00 USD</span>
       <p class="car-resumen__divider">Solo por hoy</p>
       <p class="car-resumen__gratis">GRATIS</p>
       <p class="car-resumen__sub">Todo incluido al comprar · Acceso inmediato</p>
