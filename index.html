@@ -163,7 +163,7 @@
 
   .hero-title {
     font-family: 'Bangers', cursive;
-    font-size: clamp(36px, 9vw, 52px);
+    font-size: clamp(28px, 9vw, 52px);
     letter-spacing: 2px;
     line-height: 1.1;
     text-align: center;
@@ -315,7 +315,7 @@
 
   .sec-title {
     font-family: 'Bangers', cursive;
-    font-size: clamp(28px, 7vw, 40px);
+    font-size: clamp(22px, 7vw, 40px);
     letter-spacing: 2px;
     color: var(--white);
     line-height: 1.1;
@@ -536,6 +536,7 @@
   .test-carousel::-webkit-scrollbar { display: none; }
   .test-card {
     flex: 0 0 272px;
+    max-width: calc(100vw - 48px);
     scroll-snap-align: center;
     background: var(--card-bg);
     border-radius: 20px;
@@ -602,7 +603,7 @@
   .oferta-intro__eyebrow { font-size: 17px; font-weight: 700; color: var(--text-muted); margin-bottom: 6px; }
   .oferta-intro__title {
     font-family: 'Bangers', cursive;
-    font-size: clamp(30px, 7vw, 38px); letter-spacing: 2px;
+    font-size: clamp(24px, 7vw, 38px); letter-spacing: 2px;
     color: var(--white); line-height: 1.1; margin-bottom: 10px;
   }
   .oferta-intro__title span { color: var(--accent2); }
@@ -847,7 +848,7 @@
   }
   .car-title {
     font-family: 'Bangers', cursive;
-    font-size: clamp(24px, 7vw, 36px); letter-spacing: 2px;
+    font-size: clamp(20px, 7vw, 36px); letter-spacing: 2px;
     color: var(--white); margin: 0; line-height: 1.1;
   }
   .car-title span { color: var(--accent3); }
@@ -990,6 +991,25 @@
 
   /* spacer for sticky bar */
   .sticky-spacer { height: 80px; }
+
+  /* ══════════════════════════════
+     RESPONSIVE: extra small devices (defensive design)
+     ══════════════════════════════ */
+  @media (max-width: 360px) {
+    .car-mosaic { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 340px) {
+    .land-wrap { padding: 0 10px; }
+    .hero-badges { gap: 4px; }
+    .hero-badge { padding: 8px 4px; }
+    .hero-badge__title { font-size: 10px; }
+    .hero-badge__sub { font-size: 9px; }
+    .ben-card { padding: 14px 12px; gap: 10px; }
+    .dolor-item { padding: 14px 12px; gap: 10px; }
+    .oferta-price-card { padding: 18px 12px; }
+    .oferta-timer-block { padding: 8px 10px; min-width: 65px; }
+    .oferta-timer-num { font-size: clamp(32px, 8vw, 42px); }
+  }
 
   /* ══════════════════════════════
      RESPONSIVE: desktop
@@ -1701,6 +1721,38 @@ window.toggleGarantia = function(){
     }
   }
   window.addEventListener('scroll', onScroll, { passive: true });
+})();
+
+// ── DYNAMIC TRACKING PARAMETERS ──
+(function(){
+  function appendTrackingParams() {
+    var params = new URLSearchParams(window.location.search);
+    var fbclid = params.get('fbclid');
+    var src = params.get('src') || params.get('SRC');
+
+    if (!fbclid && !src) return;
+
+    var checkoutLinks = document.querySelectorAll('a[href*="mpt69i-rg.myshopify.com/cart/"]');
+    checkoutLinks.forEach(function(link) {
+      try {
+        var url = new URL(link.href);
+        if (fbclid) {
+          url.searchParams.set('fbclid', fbclid);
+        }
+        if (src) {
+          url.searchParams.set('src', src);
+        }
+        link.href = url.toString();
+      } catch (e) {
+        console.error('Error appending tracking params:', e);
+      }
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', appendTrackingParams);
+  } else {
+    appendTrackingParams();
+  }
 })();
 </script>
 
