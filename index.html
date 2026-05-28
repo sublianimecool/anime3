@@ -1,0 +1,1762 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>+45.000 Diseños de Anime para Sublimar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+  :root {
+    --ink: #0D0D1A;
+    --ink2: #1C1C2E;
+    --accent: #7B2FFF;
+    --accent2: #FF3CAC;
+    --accent3: #00D4FF;
+    --gold: #FFD700;
+    --neon: #B8FF00;
+    --card-bg: #13132A;
+    --card-border: rgba(123,47,255,.3);
+    --text: #E8E8FF;
+    --text-muted: #9090B8;
+    --red: #FF2D55;
+    --white: #FFFFFF;
+    --grad-hero: linear-gradient(160deg, #0D0D1A 0%, #1A0A2E 50%, #0A1A2E 100%);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--ink);
+    font-family: 'Nunito', sans-serif;
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  /* ── FLOATING KANJI BG ── */
+  .kanji-bg {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+  }
+  .kanji-bg span {
+    position: absolute;
+    font-size: 80px;
+    opacity: 0.04;
+    color: var(--accent);
+    animation: floatKanji var(--spd, 20s) linear infinite;
+    animation-delay: var(--dl, 0s);
+    left: var(--lft, 10%);
+    font-family: serif;
+  }
+  @keyframes floatKanji {
+    0%   { transform: translateY(110vh) rotate(-5deg); opacity: 0; }
+    5%   { opacity: 1; }
+    90%  { opacity: .04; }
+    100% { transform: translateY(-15vh) rotate(5deg); opacity: 0; }
+  }
+
+  /* ── HALFTONE TEXTURE OVERLAY ── */
+  .halftone {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    background-image: radial-gradient(circle, rgba(123,47,255,.06) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+
+  /* ── WRAP ── */
+  .land-wrap {
+    position: relative;
+    z-index: 2;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+
+  /* ══════════════════════════════
+     HERO
+  ══════════════════════════════ */
+  .s-hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0 40px;
+    position: relative;
+  }
+
+  /* glow orbs */
+  .hero-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    pointer-events: none;
+  }
+  .hero-orb--purple { width: 350px; height: 350px; background: rgba(123,47,255,.25); top: -60px; left: -120px; }
+  .hero-orb--pink   { width: 280px; height: 280px; background: rgba(255,60,172,.2);  bottom: 0; right: -100px; }
+  .hero-orb--cyan   { width: 200px; height: 200px; background: rgba(0,212,255,.15);  top: 40%; left: 50%; }
+
+  .hero-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* eyebrow tag */
+  .hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: rgba(123,47,255,.2);
+    border: 1.5px solid rgba(123,47,255,.6);
+    border-radius: 50px;
+    padding: 5px 14px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--accent3);
+    margin-bottom: 18px;
+  }
+  .hero-tag__dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: var(--accent3);
+    box-shadow: 0 0 8px var(--accent3);
+    animation: blink 1.4s ease-in-out infinite;
+  }
+  @keyframes blink { 0%,100%{opacity:1;} 50%{opacity:.3;} }
+
+  .hero-title {
+    font-family: 'Bangers', cursive;
+    font-size: clamp(36px, 9vw, 52px);
+    letter-spacing: 2px;
+    line-height: 1.1;
+    text-align: center;
+    color: var(--white);
+    margin-bottom: 14px;
+    padding: 0 4px;
+  }
+  .hero-title .hl-purple {
+    color: var(--accent);
+    text-shadow: 0 0 30px rgba(123,47,255,.7), 0 0 60px rgba(123,47,255,.4);
+  }
+  .hero-title .hl-pink {
+    color: var(--accent2);
+    text-shadow: 0 0 30px rgba(255,60,172,.7);
+  }
+  .hero-title .hl-neon {
+    color: var(--neon);
+    text-shadow: 0 0 20px rgba(184,255,0,.8);
+    -webkit-text-stroke: 1px rgba(184,255,0,.3);
+  }
+
+  /* product image frame */
+  .hero-img-frame {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid rgba(123,47,255,.4);
+    box-shadow: 0 0 40px rgba(123,47,255,.3), 0 0 80px rgba(255,60,172,.15);
+  }
+  .hero-img-frame img,
+  .hero-img-frame video {
+    width: 100%; height: auto; display: block;
+    object-fit: cover; aspect-ratio: 16/9;
+  }
+  .hero-img-placeholder {
+    width: 100%; aspect-ratio: 16/9;
+    background: linear-gradient(135deg, #1A0A2E 0%, #0A1A2E 100%);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 12px;
+  }
+  .hero-img-placeholder__icon { font-size: 48px; opacity: .6; }
+  .hero-img-placeholder__text { font-size: 12px; color: var(--text-muted); letter-spacing: 1.5px; text-transform: uppercase; }
+
+  /* corner badge */
+  .hero-badge-corner {
+    position: absolute;
+    top: 14px; right: 14px;
+    background: var(--red);
+    color: #fff;
+    font-weight: 900;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 50px;
+    box-shadow: 0 0 16px rgba(255,45,85,.6);
+  }
+
+  .hero-body {
+    width: 100%;
+    background: var(--card-bg);
+    border-radius: 0 0 24px 24px;
+    padding: 26px 22px 30px;
+    border: 2px solid var(--card-border);
+    border-top: none;
+    box-shadow: 0 20px 60px rgba(0,0,0,.5);
+    text-align: center;
+  }
+
+  .hero-subtitle {
+    font-family: 'Bangers', cursive;
+    font-size: clamp(22px, 5vw, 28px);
+    letter-spacing: 1.5px;
+    color: var(--white);
+    margin-bottom: 10px;
+  }
+  .hero-desc {
+    font-size: clamp(13px, 3.5vw, 15px);
+    color: var(--text-muted);
+    line-height: 1.65;
+    margin-bottom: 22px;
+  }
+
+  /* mini badges row */
+  .hero-badges {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    width: 100%;
+  }
+  .hero-badge {
+    background: rgba(255,255,255,.04);
+    border: 1.5px solid rgba(123,47,255,.25);
+    border-radius: 14px;
+    padding: 12px 6px;
+    display: flex; flex-direction: column; align-items: center; gap: 6px;
+  }
+  .hero-badge__icon {
+    width: 34px; height: 34px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), #5500CC);
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 0 14px rgba(123,47,255,.5);
+  }
+  .hero-badge__icon svg { width: 17px; height: 17px; stroke: #fff; fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+  .hero-badge:nth-child(2) .hero-badge__icon { background: linear-gradient(135deg, var(--accent2), #CC0066); box-shadow: 0 0 14px rgba(255,60,172,.4); }
+  .hero-badge:nth-child(3) .hero-badge__icon { background: linear-gradient(135deg, var(--accent3), #007EAA); box-shadow: 0 0 14px rgba(0,212,255,.4); }
+  .hero-badge__title { font-weight: 800; font-size: 11px; color: var(--white); text-align: center; line-height: 1.2; }
+  .hero-badge__sub   { font-size: 10px; color: var(--text-muted); text-align: center; line-height: 1.2; }
+
+  /* ── SEPARADOR ── */
+  .land-sep {
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--accent), var(--accent2), var(--accent3), transparent);
+    margin: 4px 0;
+    border-radius: 50px;
+  }
+
+  /* ══════════════════════════════
+     DOLORES
+  ══════════════════════════════ */
+  .s-section {
+    padding: 60px 0;
+    position: relative;
+  }
+
+  .sec-eyebrow {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    padding: 6px 18px;
+    border-radius: 50px;
+    margin-bottom: 16px;
+  }
+  .sec-eyebrow--red   { background: var(--red); color: #fff; box-shadow: 0 0 16px rgba(255,45,85,.4); }
+  .sec-eyebrow--purple{ background: var(--accent); color: #fff; box-shadow: 0 0 16px rgba(123,47,255,.4); }
+  .sec-eyebrow--neon  { background: var(--neon); color: #0D0D1A; box-shadow: 0 0 16px rgba(184,255,0,.4); }
+  .sec-eyebrow--pink  { background: var(--accent2); color: #fff; box-shadow: 0 0 16px rgba(255,60,172,.4); }
+  .sec-eyebrow--cyan  { background: var(--accent3); color: #0D0D1A; box-shadow: 0 0 16px rgba(0,212,255,.4); }
+
+  .sec-header { text-align: center; margin-bottom: 36px; }
+
+  .sec-title {
+    font-family: 'Bangers', cursive;
+    font-size: clamp(28px, 7vw, 40px);
+    letter-spacing: 2px;
+    color: var(--white);
+    line-height: 1.1;
+  }
+  .sec-title .hl { color: var(--accent2); }
+  .sec-title .hl-cyan { color: var(--accent3); }
+  .sec-title .hl-neon { color: var(--neon); }
+  .sec-title .hl-purple { color: var(--accent); }
+
+  /* pain items */
+  .dolor-list { display: flex; flex-direction: column; gap: 12px; }
+  .dolor-item {
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 18px 20px 18px 18px;
+    display: flex; align-items: flex-start; gap: 14px;
+    border-left: 4px solid var(--red);
+    box-shadow: 0 4px 20px rgba(0,0,0,.3);
+    transition: transform .2s, box-shadow .2s;
+  }
+  .dolor-item:hover { transform: translateX(5px); box-shadow: 0 6px 28px rgba(255,45,85,.2); }
+  .dolor-item:nth-child(even) { border-left-color: var(--accent2); }
+  .dolor-item:nth-child(even):hover { box-shadow: 0 6px 28px rgba(255,60,172,.2); }
+  .dolor-icon-wrap { display: flex; flex-direction: column; align-items: center; gap: 4px; flex-shrink: 0; }
+  .dolor-icon {
+    width: 36px; height: 36px; border-radius: 10px;
+    background: rgba(255,45,85,.12); border: 1.5px solid rgba(255,45,85,.35);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .dolor-item:nth-child(even) .dolor-icon { background: rgba(255,60,172,.12); border-color: rgba(255,60,172,.35); }
+  .dolor-icon svg { width: 17px; height: 17px; stroke: var(--red); fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+  .dolor-item:nth-child(even) .dolor-icon svg { stroke: var(--accent2); }
+  .dolor-num { font-size: 9px; font-weight: 700; color: rgba(255,255,255,.2); letter-spacing: .5px; }
+  .dolor-text { font-size: clamp(13px, 3.6vw, 15px); color: var(--text); line-height: 1.6; margin: 3px 0 0; }
+  .dolor-text strong { color: var(--white); font-weight: 800; }
+  .dolor-text em { font-style: normal; color: var(--red); font-weight: 700; }
+  .dolor-item:nth-child(even) .dolor-text em { color: var(--accent2); }
+
+  /* ══════════════════════════════
+     BENEFICIOS
+  ══════════════════════════════ */
+  .ben-grid { display: flex; flex-direction: column; gap: 14px; }
+  .ben-card {
+    background: var(--card-bg);
+    border-radius: 18px;
+    padding: 20px;
+    display: flex; align-items: flex-start; gap: 16px;
+    border: 1.5px solid rgba(123,47,255,.2);
+    box-shadow: 0 4px 20px rgba(0,0,0,.3);
+    position: relative; overflow: hidden;
+    transition: transform .2s, box-shadow .2s;
+  }
+  .ben-card::after {
+    content: '';
+    position: absolute; top: 0; right: 0;
+    width: 80px; height: 80px;
+    background: radial-gradient(circle at top right, rgba(123,47,255,.12), transparent 70%);
+    pointer-events: none;
+  }
+  .ben-card:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(123,47,255,.2); }
+  .ben-card:nth-child(even)::after { background: radial-gradient(circle at top right, rgba(255,60,172,.1), transparent 70%); }
+  .ben-icon-wrap { display: flex; flex-direction: column; align-items: center; gap: 4px; flex-shrink: 0; }
+  .ben-icon {
+    width: 44px; height: 44px; border-radius: 14px;
+    background: linear-gradient(135deg, var(--accent), #5500CC);
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 16px rgba(123,47,255,.4);
+  }
+  .ben-card:nth-child(even) .ben-icon { background: linear-gradient(135deg, var(--accent2), #CC0066); box-shadow: 0 4px 16px rgba(255,60,172,.35); }
+  .ben-icon svg { width: 20px; height: 20px; stroke: #fff; fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+  .ben-num { font-size: 9px; font-weight: 700; color: rgba(255,255,255,.2); }
+  .ben-text { font-size: clamp(13px, 3.6vw, 15px); color: var(--text); line-height: 1.6; padding-top: 2px; }
+  .ben-text strong { color: var(--white); font-weight: 800; }
+  .ben-text em { font-style: normal; color: var(--neon); font-weight: 700; }
+
+  /* footer de sección con CTA */
+  .sec-footer { text-align: center; margin-top: 40px; }
+  .sec-footer-box {
+    background: var(--card-bg);
+    border: 2px dashed rgba(123,47,255,.4);
+    border-radius: 20px;
+    padding: 26px 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,.3);
+  }
+  .sec-footer-text {
+    font-family: 'Bangers', cursive;
+    font-size: clamp(18px, 5vw, 24px);
+    letter-spacing: 1.5px;
+    color: var(--white);
+    margin-bottom: 20px;
+    line-height: 1.3;
+  }
+  .sec-footer-text span { color: var(--accent2); }
+
+  /* ══════════════════════════════
+     CTA BUTTON
+  ══════════════════════════════ */
+  .land-cta {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+    font-size: clamp(14px, 4vw, 17px);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 16px 36px;
+    border-radius: 50px;
+    text-decoration: none;
+    border: none; cursor: pointer;
+    box-shadow: 0 6px 28px rgba(123,47,255,.5), 0 0 40px rgba(255,60,172,.25);
+    animation: ctaPulse 2.2s ease-in-out infinite;
+    transition: box-shadow .25s, transform .15s;
+  }
+  @keyframes ctaPulse {
+    0%,100% { transform: scale(1); box-shadow: 0 6px 28px rgba(123,47,255,.5), 0 0 40px rgba(255,60,172,.25); }
+    50%     { transform: scale(1.035); box-shadow: 0 8px 36px rgba(123,47,255,.7), 0 0 60px rgba(255,60,172,.35); }
+  }
+  .land-cta:hover { animation: none; transform: translateY(-3px); box-shadow: 0 12px 44px rgba(123,47,255,.7); text-decoration: none; }
+  .land-cta-block { display: block; width: 100%; text-align: center; }
+
+  /* ══════════════════════════════
+     MOSAICO / GALERÍA DE MUESTRA
+  ══════════════════════════════ */
+  .mosaico-wrap {
+    padding: 50px 16px;
+    position: relative;
+    overflow: hidden;
+  }
+  .mosaico-glow {
+    position: absolute; bottom: -100px; left: 50%;
+    transform: translateX(-50%);
+    width: 400px; height: 300px;
+    background: radial-gradient(ellipse, rgba(123,47,255,.25) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .mosaico-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative; z-index: 2;
+  }
+  .mosaico-item {
+    aspect-ratio: 1;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--card-bg);
+    border: 1.5px solid rgba(123,47,255,.3);
+    box-shadow: 0 4px 16px rgba(0,0,0,.4);
+    position: relative;
+    transition: transform .25s, box-shadow .25s;
+  }
+  .mosaico-item:hover { transform: scale(1.04); box-shadow: 0 8px 28px rgba(123,47,255,.4); }
+  .mosaico-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .mosaico-item__placeholder {
+    width: 100%; height: 100%;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;
+  }
+  .mosaico-item__placeholder span { font-size: 28px; opacity: .5; }
+  .mosaico-item__placeholder small { font-size: 9px; color: var(--text-muted); letter-spacing: 1px; text-transform: uppercase; }
+  .mosaico-item--big {
+    grid-column: span 2;
+    aspect-ratio: 2/1;
+  }
+  /* shimmer on placeholder */
+  .mosaico-item__placeholder { background: linear-gradient(135deg, #1A0A2E 0%, #0A1A2E 100%); }
+
+  /* ══════════════════════════════
+     TESTIMONIOS
+  ══════════════════════════════ */
+  .test-wrap {
+    padding: 50px 0 20px;
+    overflow: hidden;
+    position: relative;
+  }
+  .test-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    gap: 16px;
+    padding: 12px 24px 32px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .test-carousel::-webkit-scrollbar { display: none; }
+  .test-card {
+    flex: 0 0 272px;
+    scroll-snap-align: center;
+    background: var(--card-bg);
+    border-radius: 20px;
+    border: 1.5px solid var(--card-border);
+    display: flex; flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 8px 28px rgba(0,0,0,.4);
+    transition: box-shadow .3s;
+  }
+  .test-card:nth-child(even) { border-color: rgba(255,60,172,.25); }
+  .test-card:hover { box-shadow: 0 12px 40px rgba(123,47,255,.3); }
+  .test-img-container { width: 100%; aspect-ratio: 4/5; overflow: hidden; background: #1A0A2E; flex-shrink: 0; }
+  .test-img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .3s; }
+  .test-card:hover .test-img { transform: scale(1.04); }
+  .test-img-placeholder {
+    width: 100%; height: 100%;
+    background: linear-gradient(135deg, #1A0A2E, #0A1A2E);
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
+  }
+  .test-img-placeholder span { font-size: 40px; opacity: .5; }
+  .test-img-placeholder small { font-size: 10px; color: var(--text-muted); letter-spacing: 1px; text-transform: uppercase; }
+  .test-content {
+    padding: 20px 18px 22px;
+    text-align: center; display: flex; flex-direction: column; align-items: center;
+    background: var(--card-bg); border-top: 1px solid rgba(123,47,255,.2);
+    flex: 1;
+  }
+  .test-stars { display: flex; gap: 3px; margin-bottom: 10px; }
+  .test-stars svg { width: 14px; height: 14px; fill: var(--gold); }
+  .test-name {
+    font-family: 'Bangers', cursive;
+    font-size: 19px; letter-spacing: 1.5px;
+    color: var(--white); margin-bottom: 8px;
+  }
+  .test-txt { font-size: 13px; color: var(--text-muted); line-height: 1.65; font-style: italic; }
+  .test-verified {
+    display: inline-flex; align-items: center; gap: 5px; margin-top: 12px;
+    background: rgba(123,47,255,.12); border: 1px solid rgba(123,47,255,.3);
+    border-radius: 50px; padding: 3px 10px;
+    font-size: 10px; font-weight: 800; color: var(--accent3);
+    letter-spacing: .5px; text-transform: uppercase;
+  }
+  .test-verified::before { content: '✓'; font-weight: 900; }
+  .test-hint {
+    text-align: center; font-size: 10px; color: rgba(255,255,255,.3);
+    margin-top: 4px; text-transform: uppercase; letter-spacing: 2px;
+  }
+
+  /* ══════════════════════════════
+     OFERTA
+  ══════════════════════════════ */
+  .oferta-wrap {
+    padding: 20px 0;
+    position: relative;
+  }
+  .oferta-inner {
+    max-width: 500px; margin: 0 auto;
+    display: flex; flex-direction: column; gap: 16px;
+    padding: 0 16px;
+    position: relative; z-index: 2;
+  }
+  .oferta-intro { text-align: center; padding: 4px 4px 8px; }
+  .oferta-intro__eyebrow { font-size: 17px; font-weight: 700; color: var(--text-muted); margin-bottom: 6px; }
+  .oferta-intro__title {
+    font-family: 'Bangers', cursive;
+    font-size: clamp(30px, 7vw, 38px); letter-spacing: 2px;
+    color: var(--white); line-height: 1.1; margin-bottom: 10px;
+  }
+  .oferta-intro__title span { color: var(--accent2); }
+  .oferta-intro__divider {
+    width: 48px; height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    border-radius: 50px; margin: 0 auto 14px;
+  }
+  .oferta-intro__quote { font-size: 14px; font-style: italic; color: var(--text-muted); line-height: 1.7; padding: 0 8px; }
+
+  .oferta-num-stat {
+    display: flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 0;
+  }
+  .oferta-num-stat__num {
+    font-size: 13px; font-weight: 900; color: var(--white);
+    letter-spacing: 1px; text-transform: uppercase;
+  }
+  .oferta-num-stat__dot { width: 4px; height: 4px; border-radius: 50%; background: var(--accent); }
+  .oferta-num-stat__label { font-size: 12px; font-weight: 700; color: var(--accent3); text-transform: uppercase; letter-spacing: 1px; }
+
+  .oferta-img-wrap {
+    width: 100%; border-radius: 20px; overflow: hidden;
+    box-shadow: 0 8px 40px rgba(123,47,255,.35);
+    border: 2px solid rgba(123,47,255,.3);
+    position: relative;
+  }
+  .oferta-img-wrap img { width: 100%; height: auto; display: block; object-fit: cover; }
+  .oferta-img-placeholder {
+    aspect-ratio: 4/3;
+    background: linear-gradient(135deg, #1A0A2E 0%, #0A1A2E 100%);
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
+  }
+  .oferta-img-placeholder span { font-size: 52px; opacity: .5; }
+  .oferta-img-placeholder small { font-size: 11px; color: var(--text-muted); letter-spacing: 1.5px; text-transform: uppercase; }
+  .oferta-img-badge {
+    position: absolute; top: 14px; right: 14px;
+    background: var(--red); color: #fff;
+    font-weight: 900; font-size: 11px; letter-spacing: 1px; text-transform: uppercase;
+    padding: 6px 14px; border-radius: 50px;
+    box-shadow: 0 0 20px rgba(255,45,85,.7);
+  }
+
+  .oferta-price-card {
+    background: var(--card-bg); border-radius: 22px;
+    padding: 26px 22px 28px;
+    border: 1.5px solid rgba(123,47,255,.3);
+    box-shadow: 0 8px 40px rgba(0,0,0,.4);
+    display: flex; flex-direction: column; gap: 0;
+  }
+  .oferta-product-title {
+    font-family: 'Bangers', cursive;
+    font-size: clamp(22px, 6vw, 30px); letter-spacing: 1.5px;
+    color: var(--white); line-height: 1.15; margin-bottom: 16px;
+  }
+  .oferta-product-title span { color: var(--accent); }
+  .oferta-price-old { font-size: 15px; color: var(--text-muted); text-decoration: line-through; margin-bottom: 6px; font-weight: 600; }
+  .oferta-price-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 8px; }
+  .oferta-price-new {
+    font-family: 'Bangers', cursive;
+    font-size: clamp(38px, 10vw, 52px); letter-spacing: 2px;
+    color: var(--white); line-height: 1;
+    text-shadow: 0 0 30px rgba(184,255,0,.6);
+  }
+  .oferta-price-currency { font-size: clamp(20px, 5vw, 26px); font-weight: 900; color: var(--neon); align-self: flex-start; padding-top: 8px; }
+  .oferta-ahorro-badge {
+    background: var(--neon); color: #0D0D1A;
+    font-weight: 900; font-size: 13px; padding: 5px 12px; border-radius: 50px;
+    box-shadow: 0 0 18px rgba(184,255,0,.6); white-space: nowrap;
+  }
+  .oferta-urgencia { font-size: 13px; color: var(--red); font-weight: 700; margin-bottom: 20px; }
+  .oferta-divider { height: 1px; background: rgba(123,47,255,.25); margin-bottom: 20px; }
+
+  /* countdown */
+  .oferta-countdown-card {
+    background: #080818; border-radius: 18px;
+    padding: 22px 20px 20px;
+    border: 1.5px solid rgba(123,47,255,.35);
+    box-shadow: 0 0 30px rgba(123,47,255,.2), 0 8px 32px rgba(0,0,0,.5);
+    text-align: center; margin-bottom: 20px;
+    position: relative; overflow: hidden;
+  }
+  .oferta-countdown-card::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at top, rgba(123,47,255,.15) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .oferta-countdown-headline {
+    font-family: 'Bangers', cursive;
+    font-size: clamp(18px, 5vw, 24px); letter-spacing: 2px; text-transform: uppercase;
+    color: var(--white); margin-bottom: 6px;
+  }
+  .oferta-countdown-headline span { color: var(--neon); text-shadow: 0 0 20px rgba(184,255,0,.7); }
+  .oferta-countdown-sub {
+    font-size: 13px; color: rgba(255,255,255,.55);
+    margin-bottom: 18px; line-height: 1.55;
+  }
+  .oferta-countdown-sub strong { color: rgba(255,255,255,.9); }
+
+  .oferta-timer { display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 16px; }
+  .oferta-timer-block {
+    display: flex; flex-direction: column; align-items: center; gap: 4px;
+    background: rgba(255,255,255,.05); border-radius: 14px; padding: 12px 20px;
+    border: 1px solid rgba(123,47,255,.3); min-width: 80px;
+  }
+  .oferta-timer-num {
+    font-family: 'Bangers', cursive;
+    font-size: clamp(42px, 11vw, 56px); letter-spacing: 2px;
+    color: var(--white); line-height: 1;
+    transition: color .4s;
+  }
+  .oferta-timer-label { font-size: 10px; font-weight: 700; color: rgba(255,255,255,.35); letter-spacing: 2px; text-transform: uppercase; }
+  .oferta-timer-sep {
+    font-family: 'Bangers', cursive;
+    font-size: clamp(36px, 9vw, 48px); color: var(--accent);
+    line-height: 1; padding-bottom: 14px;
+    text-shadow: 0 0 20px rgba(123,47,255,.8);
+  }
+
+  /* live viewers */
+  .oferta-viendo {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    background: rgba(0,212,255,.08); border: 1.5px solid rgba(0,212,255,.3);
+    border-radius: 14px; padding: 11px 18px;
+    position: relative; overflow: hidden; margin-bottom: 8px;
+  }
+  .oferta-viendo::after {
+    content: '';
+    position: absolute; top: 0; left: -80%; width: 55%; height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(0,212,255,.18) 35%, rgba(255,255,255,.2) 50%, rgba(0,212,255,.18) 65%, transparent);
+    animation: vienShine 4s ease-in-out infinite; pointer-events: none;
+  }
+  @keyframes vienShine { 0%{left:-80%;opacity:0;} 8%{opacity:1;} 45%{left:130%;opacity:1;} 46%,100%{left:130%;opacity:0;} }
+  .oferta-viendo__dot {
+    width: 10px; height: 10px; border-radius: 50%; background: var(--accent3); flex-shrink: 0;
+    animation: dotPulse 1.5s ease-in-out infinite; position: relative; z-index:1;
+    box-shadow: 0 0 10px var(--accent3);
+  }
+  @keyframes dotPulse { 0%,100%{opacity:1;transform:scale(1);} 50%{opacity:.6;transform:scale(.8);} }
+  .oferta-viendo__text { font-size: 13px; font-weight: 700; color: var(--accent3); position: relative; z-index:1; }
+  .oferta-viendo__num { font-weight: 900; }
+
+  .oferta-cupos {
+    text-align: center; font-size: 12px; font-weight: 700; color: var(--red);
+    letter-spacing: .2px; line-height: 1.4; margin: 4px 0 0;
+  }
+
+  /* main cta button */
+  .oferta-cta {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    width: 100%;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900; font-size: clamp(15px, 4.5vw, 18px);
+    text-transform: uppercase; letter-spacing: 1.5px;
+    padding: 18px 24px; border-radius: 50px;
+    text-decoration: none; border: none; cursor: pointer;
+    box-shadow: 0 8px 32px rgba(123,47,255,.55), 0 0 50px rgba(255,60,172,.25);
+    animation: ctaPulse 2.2s ease-in-out infinite;
+    transition: box-shadow .25s, transform .15s;
+  }
+  .oferta-cta:hover { animation: none; transform: translateY(-3px); box-shadow: 0 14px 48px rgba(123,47,255,.75); text-decoration: none; }
+  .oferta-cta-arrow {
+    width: 28px; height: 28px; border-radius: 50%;
+    background: rgba(255,255,255,.15);
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .oferta-cta-arrow svg { width: 14px; height: 14px; stroke: #fff; fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+
+  /* garantia */
+  .oferta-garantia {
+    background: var(--card-bg); border: 1.5px solid rgba(123,47,255,.2);
+    border-radius: 18px; overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,.3);
+    transition: border-color .2s;
+  }
+  .oferta-garantia.open { border-color: var(--accent); }
+  .oferta-garantia-trigger {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 18px; cursor: pointer; width: 100%;
+    background: transparent; border: none; gap: 10px;
+  }
+  .oferta-garantia-left { display: flex; align-items: center; gap: 10px; }
+  .oferta-garantia-icon {
+    width: 32px; height: 32px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), #5500CC);
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    box-shadow: 0 0 12px rgba(123,47,255,.4);
+  }
+  .oferta-garantia-icon svg { width: 16px; height: 16px; stroke: #fff; fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+  .oferta-garantia-text { font-size: 14px; font-weight: 700; color: var(--white); text-align: left; }
+  .oferta-garantia-chevron { width: 18px; height: 18px; stroke: var(--accent); fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; transition: transform .3s; }
+  .oferta-garantia.open .oferta-garantia-chevron { transform: rotate(180deg); }
+  .oferta-garantia-body { max-height: 0; overflow: hidden; transition: max-height .45s ease; }
+  .oferta-garantia.open .oferta-garantia-body { max-height: 300px; }
+  .oferta-garantia-content { padding: 0 18px 18px; }
+  .oferta-garantia-content p { font-size: 13.5px; color: var(--text-muted); line-height: 1.7; }
+  .oferta-garantia-content strong { color: var(--white); }
+
+  /* meli card */
+  .oferta-meli {
+    background: var(--card-bg); border-radius: 18px;
+    padding: 16px 18px; border: 1.5px solid rgba(123,47,255,.2);
+    box-shadow: 0 4px 16px rgba(0,0,0,.3);
+  }
+  .meli-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+  .meli-logo { width: 40px; height: 40px; border-radius: 10px; background: #FFE600; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .meli-logo svg { width: 26px; height: 26px; }
+  .meli-vendor-name { font-weight: 800; font-size: 14px; color: var(--white); }
+  .meli-vendor-status { font-size: 12px; color: var(--accent3); font-weight: 600; }
+  .meli-divider { height: 1px; background: rgba(255,255,255,.08); margin-bottom: 10px; }
+  .meli-stats { display: flex; gap: 10px; justify-content: space-around; }
+  .meli-stat { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+  .meli-stat__icon-wrap { position: relative; }
+  .meli-stat__icon { width: 22px; height: 22px; }
+  .meli-stat__check { position: absolute; bottom: -3px; right: -5px; width: 12px; height: 12px; background: var(--neon); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+  .meli-stat__check svg { width: 7px; height: 7px; stroke: #0D0D1A; fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+  .meli-stat__num { font-weight: 900; font-size: 14px; color: var(--white); letter-spacing: .5px; }
+  .meli-stat__label { font-size: 10px; color: var(--text-muted); font-weight: 600; text-align: center; }
+
+  .oferta-social {
+    text-align: center; font-size: 12px; color: var(--text-muted); font-weight: 600; line-height: 1.65;
+  }
+  .oferta-stars { color: var(--gold); letter-spacing: 2px; }
+
+  /* ══════════════════════════════
+     BONOS
+  ══════════════════════════════ */
+  .car-wrap {
+    max-width: 500px; margin: 0 auto;
+    padding: 60px 16px;
+  }
+  .car-header { text-align: center; margin-bottom: 30px; }
+  .car-eyebrow {
+    display: inline-block; font-size: 11px; font-weight: 800;
+    letter-spacing: 2.5px; text-transform: uppercase;
+    background: var(--accent2); color: #fff;
+    padding: 6px 18px; border-radius: 50px; margin-bottom: 14px;
+    box-shadow: 0 0 16px rgba(255,60,172,.4);
+  }
+  .car-title {
+    font-family: 'Bangers', cursive;
+    font-size: clamp(24px, 7vw, 36px); letter-spacing: 2px;
+    color: var(--white); margin: 0; line-height: 1.1;
+  }
+  .car-title span { color: var(--accent3); }
+  .car-mosaic { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .car-card {
+    background: var(--card-bg); border-radius: 18px;
+    overflow: hidden; border: 1.5px solid var(--card-border);
+    box-shadow: 0 6px 20px rgba(0,0,0,.4);
+    transition: transform .25s, box-shadow .25s;
+  }
+  .car-card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(123,47,255,.3); }
+  .car-card:nth-child(even) { border-color: rgba(255,60,172,.25); }
+  .car-card__img { position: relative; aspect-ratio: 16/9; overflow: hidden; background: #1A0A2E; }
+  .car-card__img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .car-card__img-placeholder {
+    width: 100%; height: 100%;
+    display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(135deg, #1A0A2E, #0A1A2E);
+  }
+  .car-card__img-placeholder span { font-size: 36px; opacity: .5; }
+  .car-card__badge {
+    position: absolute; top: 8px; left: 8px;
+    background: var(--accent); color: #fff;
+    font-size: 10px; font-weight: 900; letter-spacing: 1px; text-transform: uppercase;
+    padding: 3px 10px; border-radius: 50px;
+    box-shadow: 0 0 12px rgba(123,47,255,.6);
+  }
+  .car-card:nth-child(even) .car-card__badge { background: var(--accent2); box-shadow: 0 0 12px rgba(255,60,172,.5); }
+  .car-card__heart { position: absolute; top: 8px; right: 10px; font-size: 16px; }
+  .car-card__body { padding: 12px 14px 14px; }
+  .car-card__name { font-weight: 800; font-size: 13px; color: var(--white); margin-bottom: 3px; line-height: 1.3; }
+  .car-card__sub { font-size: 11px; color: var(--text-muted); margin-bottom: 8px; }
+  .car-card__precio { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+  .car-card__precio-antes { font-size: 11px; color: var(--text-muted); text-decoration: line-through; }
+  .car-card__precio-gratis { font-size: 11px; font-weight: 900; color: var(--neon); }
+  .car-card--sorpresa .car-card__img--sorpresa {
+    display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(135deg, #1A0A2E, #2A0A3E);
+  }
+  .sorpresa-inner { text-align: center; }
+  .sorpresa-emoji { font-size: 40px; animation: floatEmoji 2.5s ease-in-out infinite; }
+  @keyframes floatEmoji { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-8px);} }
+  .sorpresa-tag { font-size: 10px; font-weight: 800; color: var(--neon); text-transform: uppercase; letter-spacing: 1.5px; margin-top: 6px; }
+
+  .car-resumen {
+    text-align: center; margin-top: 28px;
+    background: var(--card-bg); border-radius: 20px; padding: 26px 20px;
+    border: 2px dashed rgba(123,47,255,.4);
+    box-shadow: 0 6px 28px rgba(0,0,0,.35);
+  }
+  .car-resumen__label { font-size: 13px; font-weight: 600; color: var(--text-muted); margin-bottom: 6px; }
+  .car-resumen__valor-antes { font-size: 20px; color: var(--text-muted); text-decoration: line-through; display: block; }
+  .car-resumen__divider { font-size: 13px; color: var(--text-muted); margin: 8px 0 4px; text-transform: uppercase; letter-spacing: 2px; }
+  .car-resumen__gratis {
+    font-family: 'Bangers', cursive;
+    font-size: 52px; letter-spacing: 4px;
+    color: var(--neon); display: block;
+    text-shadow: 0 0 30px rgba(184,255,0,.8);
+  }
+  .car-resumen__sub { font-size: 12px; color: var(--text-muted); margin-top: 6px; }
+
+  /* ══════════════════════════════
+     FAQ
+  ══════════════════════════════ */
+  .faq-wrap {
+    padding: 60px 16px;
+    max-width: 500px; margin: 0 auto;
+  }
+  .faq-header { text-align: center; margin-bottom: 32px; }
+  .faq-item {
+    background: var(--card-bg); border-radius: 16px; overflow: hidden;
+    margin-bottom: 10px; border: 1.5px solid rgba(123,47,255,.2);
+    box-shadow: 0 4px 16px rgba(0,0,0,.3);
+    transition: border-color .2s;
+  }
+  .faq-item.active { border-color: var(--accent); }
+  .faq-question {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 20px; cursor: pointer; width: 100%;
+    background: transparent; border: none; gap: 12px;
+    text-align: left;
+  }
+  .faq-question-text { font-size: clamp(13px, 3.5vw, 15px); font-weight: 700; color: var(--white); line-height: 1.4; }
+  .faq-toggle {
+    width: 28px; height: 28px; border-radius: 50%; flex-shrink: 0;
+    background: rgba(123,47,255,.15); border: 1px solid rgba(123,47,255,.35);
+    display: flex; align-items: center; justify-content: center;
+    transition: transform .3s, background .2s;
+  }
+  .faq-item.active .faq-toggle { background: var(--accent); transform: rotate(180deg); }
+  .faq-toggle svg { width: 14px; height: 14px; stroke: var(--accent); fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+  .faq-item.active .faq-toggle svg { stroke: #fff; }
+  .faq-answer { max-height: 0; overflow: hidden; transition: max-height .4s ease; }
+  .faq-item.active .faq-answer { max-height: 300px; }
+  .faq-answer-content { padding: 0 20px 18px; }
+  .faq-answer-content p { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
+
+  /* ══════════════════════════════
+     STICKY BOTTOM BAR
+  ══════════════════════════════ */
+  .sticky-bar {
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(8,8,24,.95);
+    backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(123,47,255,.4);
+    box-shadow: 0 -4px 30px rgba(123,47,255,.3);
+    padding: 12px 20px 16px;
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    transform: translateY(100%);
+    transition: transform .5s ease;
+  }
+  .sticky-bar.visible { transform: translateY(0); }
+  .sticky-bar__price {
+    display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: center;
+  }
+  .sticky-bar__price-old { font-size: 13px; color: var(--text-muted); text-decoration: line-through; font-weight: 600; }
+  .sticky-bar__price-new {
+    font-family: 'Bangers', cursive;
+    font-size: 28px; letter-spacing: 2px; color: var(--white);
+  }
+  .sticky-bar__discount { background: var(--neon); color: #0D0D1A; font-size: 12px; font-weight: 900; padding: 3px 10px; border-radius: 50px; }
+  .sticky-bar__cta {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    width: 100%; max-width: 380px;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    color: #fff; font-family: 'Nunito', sans-serif; font-weight: 900;
+    font-size: 15px; text-transform: uppercase; letter-spacing: 1.5px;
+    padding: 14px 24px; border-radius: 50px;
+    text-decoration: none; border: none; cursor: pointer;
+    box-shadow: 0 4px 24px rgba(123,47,255,.5);
+  }
+
+  /* spacer for sticky bar */
+  .sticky-spacer { height: 80px; }
+
+  /* ══════════════════════════════
+     RESPONSIVE: desktop
+  ══════════════════════════════ */
+  @media (min-width: 600px) {
+    .land-wrap { max-width: 560px; }
+    .mosaico-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+  </style>
+</head>
+<body>
+
+<!-- ── KANJI FLOATING BG ── -->
+<div class="kanji-bg" aria-hidden="true">
+  <span style="--lft:3%;  --spd:22s; --dl:-2s;">日</span>
+  <span style="--lft:15%; --spd:19s; --dl:-7s;">本</span>
+  <span style="--lft:28%; --spd:25s; --dl:-12s;">火</span>
+  <span style="--lft:42%; --spd:18s; --dl:-4s;">力</span>
+  <span style="--lft:55%; --spd:23s; --dl:-9s;">風</span>
+  <span style="--lft:70%; --spd:20s; --dl:-16s;">星</span>
+  <span style="--lft:84%; --spd:17s; --dl:-3s;">夢</span>
+</div>
+<div class="halftone" aria-hidden="true"></div>
+
+<div class="land-wrap">
+
+  <!-- ══════════════════════════════
+       SECCIÓN 1: HERO
+  ══════════════════════════════ -->
+  <section class="s-hero">
+    <div class="hero-orb hero-orb--purple"></div>
+    <div class="hero-orb hero-orb--pink"></div>
+    <div class="hero-orb hero-orb--cyan"></div>
+
+    <div class="hero-card">
+      <div class="hero-tag">
+        <span class="hero-tag__dot"></span>
+        Más de 45.000 diseños disponibles
+      </div>
+
+      <h1 class="hero-title">
+        El paquete de diseños de anime<br>
+        <span class="hl-pink">más vendido</span> para<br>
+        <span class="hl-neon">sublimadores</span>
+      </h1>
+
+      <!-- VIDEO HERO -->
+      <div class="hero-img-frame">
+        <video src="https://res.cloudinary.com/daijidw3t/video/upload/v1779983784/Se_2.0_o8sswl.mp4" autoplay loop muted playsinline></video>
+        <div class="hero-badge-corner">¡Más vendido!</div>
+      </div>
+
+      <div class="hero-body">
+        <h2 class="hero-subtitle">+45.000 diseños listos para imprimir y vender</h2>
+        <p class="hero-desc">
+          Camisetas, tazas, cojines, mochilas… todo lo que sublimas,
+          con los personajes que la gente quiere comprar. Un solo paquete.
+          Acceso inmediato. Sin límite de uso comercial.
+        </p>
+
+        <div class="hero-badges">
+          <div class="hero-badge">
+            <div class="hero-badge__icon">
+              <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <div class="hero-badge__title">Descarga inmediata</div>
+            <div class="hero-badge__sub">Acceso al instante</div>
+          </div>
+          <div class="hero-badge">
+            <div class="hero-badge__icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <div class="hero-badge__title">Diseños TOP</div>
+            <div class="hero-badge__sub">Los más buscados</div>
+          </div>
+          <div class="hero-badge">
+            <div class="hero-badge__icon">
+              <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg>
+            </div>
+            <div class="hero-badge__title">Alta resolución</div>
+            <div class="hero-badge__sub">PNG y vectores</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="land-sep"></div>
+
+  <!-- ══════════════════════════════
+       SECCIÓN 2: DOLORES
+  ══════════════════════════════ -->
+  <section class="s-section">
+    <div class="sec-header">
+      <div class="sec-eyebrow sec-eyebrow--red">Reconoce esto</div>
+      <h2 class="sec-title">¿Cuántas veces te pasó<br><span class="hl">esto mismo?</span></h2>
+    </div>
+
+    <div class="dolor-list">
+      <div class="dolor-item">
+        <div class="dolor-icon-wrap">
+          <div class="dolor-icon">
+            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
+          <span class="dolor-num">01</span>
+        </div>
+        <p class="dolor-text">Pasas <strong>horas buscando diseños de anime en internet</strong> y terminas encontrando lo mismo de siempre: imágenes de baja calidad, pixeladas, que <em>arruinan la sublimación</em>.</p>
+      </div>
+
+      <div class="dolor-item">
+        <div class="dolor-icon-wrap">
+          <div class="dolor-icon">
+            <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <span class="dolor-num">02</span>
+        </div>
+        <p class="dolor-text">Pagas por suscripciones caras de plataformas de diseño que <strong>ni siquiera tienen los personajes de anime</strong> que tus clientes piden. Plata tirada a la basura.</p>
+      </div>
+
+      <div class="dolor-item">
+        <div class="dolor-icon-wrap">
+          <div class="dolor-icon">
+            <svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <span class="dolor-num">03</span>
+        </div>
+        <p class="dolor-text">Tu cliente llega entusiasmado pidiendo un diseño de Naruto, Dragon Ball o Demon Slayer y <strong>tú no tienes nada listo</strong>. Lo pierdes. Lo pierde tu competencia.</p>
+      </div>
+
+      <div class="dolor-item">
+        <div class="dolor-icon-wrap">
+          <div class="dolor-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <span class="dolor-num">04</span>
+        </div>
+        <p class="dolor-text">Pierdes tiempo valioso <strong>tratando de vectorizar o mejorar imágenes</strong> que encontraste gratis. Una hora para conseguir un diseño que no quedó bien. <em>Eso no es negocio.</em></p>
+      </div>
+
+      <div class="dolor-item">
+        <div class="dolor-icon-wrap">
+          <div class="dolor-icon">
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <span class="dolor-num">05</span>
+        </div>
+        <p class="dolor-text">Ves que otros sublimadores venden camisetas de anime como pan caliente mientras <strong>tú no tienes variedad</strong> para ofrecer. El anime es tendencia y tú te quedas sin aprovecharla.</p>
+      </div>
+
+      <div class="dolor-item">
+        <div class="dolor-icon-wrap">
+          <div class="dolor-icon">
+            <svg viewBox="0 0 24 24"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"/><path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/><path d="M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z"/><path d="M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z"/><path d="M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z"/><path d="M15.5 19H14v1.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"/><path d="M10 9.5C10 8.67 9.33 8 8.5 8h-5C2.67 8 2 8.67 2 9.5S2.67 11 3.5 11h5c.83 0 1.5-.67 1.5-1.5z"/><path d="M8.5 5H10V3.5C10 2.67 9.33 2 8.5 2S7 2.67 7 3.5 7.67 5 8.5 5z"/></svg>
+          </div>
+          <span class="dolor-num">06</span>
+        </div>
+        <p class="dolor-text">Compraste paquetes de diseños antes que <strong>tenían 500 archivos repetidos, mal nombrados, imposibles de encontrar</strong>. Una colección inútil que nunca usas.</p>
+      </div>
+    </div>
+
+    <div class="sec-footer">
+      <div class="sec-footer-box">
+        <p class="sec-footer-text">Si te identificas con <span>alguno de estos puntos</span>, este paquete fue creado exactamente para ti.</p>
+        <a href="#oferta" class="land-cta">Ver la solución →</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="land-sep"></div>
+
+  <!-- ══════════════════════════════
+       SECCIÓN 3: GALERÍA MUESTRA
+  ══════════════════════════════ -->
+  <section class="mosaico-wrap">
+    <div class="sec-header" style="padding: 0 0 30px;">
+      <div class="sec-eyebrow sec-eyebrow--purple">Mira lo que recibes</div>
+      <h2 class="sec-title">Diseños que <span class="hl-neon">se venden solos</span></h2>
+    </div>
+
+    <!-- GALERÍA — reemplaza los placeholders con tus imágenes reales -->
+    <div class="mosaico-grid">
+      <div class="mosaico-item mosaico-item--big">
+        <!-- <img src="TU_IMAGEN.jpg" alt="Diseño anime"> -->
+        <div class="mosaico-item__placeholder">
+          <span>⚔️</span>
+          <small>Tu imagen</small>
+        </div>
+      </div>
+      <div class="mosaico-item">
+        <div class="mosaico-item__placeholder"><span>🔥</span></div>
+      </div>
+      <div class="mosaico-item">
+        <div class="mosaico-item__placeholder"><span>🌸</span></div>
+      </div>
+      <div class="mosaico-item">
+        <div class="mosaico-item__placeholder"><span>⚡</span></div>
+      </div>
+      <div class="mosaico-item mosaico-item--big">
+        <div class="mosaico-item__placeholder">
+          <span>🎌</span>
+          <small>Tu imagen</small>
+        </div>
+      </div>
+      <div class="mosaico-item">
+        <div class="mosaico-item__placeholder"><span>🗡️</span></div>
+      </div>
+      <div class="mosaico-item">
+        <div class="mosaico-item__placeholder"><span>🌙</span></div>
+      </div>
+      <div class="mosaico-item">
+        <div class="mosaico-item__placeholder"><span>👁️</span></div>
+      </div>
+    </div>
+
+    <div class="mosaico-glow"></div>
+  </section>
+
+  <div class="land-sep"></div>
+
+  <!-- ══════════════════════════════
+       SECCIÓN 4: BENEFICIOS
+  ══════════════════════════════ -->
+  <section class="s-section">
+    <div class="sec-header">
+      <div class="sec-eyebrow sec-eyebrow--neon">Por qué este paquete es diferente</div>
+      <h2 class="sec-title">Todo lo que necesitas<br><span class="hl-purple">en un solo lugar</span></h2>
+    </div>
+
+    <div class="ben-grid">
+      <div class="ben-card">
+        <div class="ben-icon-wrap">
+          <div class="ben-icon">
+            <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          </div>
+          <span class="ben-num">01</span>
+        </div>
+        <p class="ben-text"><strong>+45.000 diseños organizados por serie.</strong> Naruto, Dragon Ball, One Piece, Demon Slayer, Attack on Titan y decenas de series más. <em>Encuentra en segundos lo que tu cliente pide.</em></p>
+      </div>
+
+      <div class="ben-card">
+        <div class="ben-icon-wrap">
+          <div class="ben-icon">
+            <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <span class="ben-num">02</span>
+        </div>
+        <p class="ben-text"><strong>Alta resolución garantizada: 300 DPI mínimo.</strong> Cada archivo está listo para sublimación. <em>Sin pixeles, sin bordes sucios, sin retoques.</em> Imprime directo y vende.</p>
+      </div>
+
+      <div class="ben-card">
+        <div class="ben-icon-wrap">
+          <div class="ben-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+          </div>
+          <span class="ben-num">03</span>
+        </div>
+        <p class="ben-text">Diseños con los personajes <strong>más buscados y más vendidos del mercado.</strong> Armados pensando en lo que los compradores realmente quieren poner en su ropa, tazas y más.</p>
+      </div>
+
+      <div class="ben-card">
+        <div class="ben-icon-wrap">
+          <div class="ben-icon">
+            <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <span class="ben-num">04</span>
+        </div>
+        <p class="ben-text"><strong>Descarga inmediata.</strong> En minutos ya tienes todo en tu computadora. Sin esperas, sin formularios complicados. <em>Compras hoy, vendes hoy.</em></p>
+      </div>
+
+      <div class="ben-card">
+        <div class="ben-icon-wrap">
+          <div class="ben-icon">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg>
+          </div>
+          <span class="ben-num">05</span>
+        </div>
+        <p class="ben-text">Formatos en <strong>PNG con fondo transparente</strong> listos para sublimación directa, además de versiones para fondo oscuro y claro. <em>Compatible con todos los programas de diseño.</em></p>
+      </div>
+
+      <div class="ben-card">
+        <div class="ben-icon-wrap">
+          <div class="ben-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <span class="ben-num">06</span>
+        </div>
+        <p class="ben-text"><strong>Actualizaciones incluidas.</strong> El paquete crece con el tiempo. Nuevas series, nuevos personajes, nuevas tendencias. <em>Una sola vez y tienes acceso para siempre.</em></p>
+      </div>
+
+      <div class="ben-card">
+        <div class="ben-icon-wrap">
+          <div class="ben-icon">
+            <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <span class="ben-num">07</span>
+        </div>
+        <p class="ben-text">Una inversión pequeña que <strong>se recupera con la primera venta.</strong> Cada diseño te cuesta fracción de centavo. El valor es ridículo comparado con lo que generas con él.</p>
+      </div>
+
+      <div class="ben-card">
+        <div class="ben-icon-wrap">
+          <div class="ben-icon">
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <span class="ben-num">08</span>
+        </div>
+        <p class="ben-text">Ya lo usan <strong>cientos de sublimadores en toda Latinoamérica.</strong> Los que no esperan, los que venden, los que ofrecen variedad cuando su competencia no puede. <em>Sé uno de ellos.</em></p>
+      </div>
+    </div>
+
+    <div class="sec-footer">
+      <div class="sec-footer-box">
+        <p class="sec-footer-text">Deja de perder ventas por falta de diseños.<br><span>Empieza hoy.</span></p>
+        <a href="#oferta" class="land-cta">Quiero los +45.000 diseños 🔥</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="land-sep"></div>
+
+  <!-- ══════════════════════════════
+       SECCIÓN 5: TESTIMONIOS
+  ══════════════════════════════ -->
+  <div class="test-wrap">
+    <div class="sec-header" style="padding: 0 16px 0;">
+      <div class="sec-eyebrow sec-eyebrow--pink">Resultados reales</div>
+      <h2 class="sec-title">Lo que dicen quienes<br><span class="hl-cyan">ya están vendiendo</span></h2>
+    </div>
+
+    <div class="test-carousel">
+      <!-- TESTIMONIO 1 — reemplaza imagen y texto -->
+      <div class="test-card">
+        <div class="test-img-container">
+          <!-- <img class="test-img" src="TESTIMONIO_1.jpg" alt="Testimonio"> -->
+          <div class="test-img-placeholder"><span>📸</span><small>Foto testimonio</small></div>
+        </div>
+        <div class="test-content">
+          <div class="test-stars">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div class="test-name">Valentina R.</div>
+          <p class="test-txt">"Vendí 12 camisetas de Demon Slayer en la primera semana. Los diseños quedaron perfectos y mis clientes me pidieron más. Increíble la calidad."</p>
+          <div class="test-verified">Compra verificada</div>
+        </div>
+      </div>
+
+      <!-- TESTIMONIO 2 -->
+      <div class="test-card">
+        <div class="test-img-container">
+          <div class="test-img-placeholder"><span>📸</span><small>Foto testimonio</small></div>
+        </div>
+        <div class="test-content">
+          <div class="test-stars">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div class="test-name">Carlos M.</div>
+          <p class="test-txt">"Antes buscaba diseños 2 horas para conseguir uno bueno. Ahora tengo todo organizado. Mis ventas subieron un 40% desde que compré el paquete."</p>
+          <div class="test-verified">Compra verificada</div>
+        </div>
+      </div>
+
+      <!-- TESTIMONIO 3 -->
+      <div class="test-card">
+        <div class="test-img-container">
+          <div class="test-img-placeholder"><span>📸</span><small>Foto testimonio</small></div>
+        </div>
+        <div class="test-content">
+          <div class="test-stars">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div class="test-name">Daniela F.</div>
+          <p class="test-txt">"Tengo un negocio de tazas y cojines. Los diseños de anime son los que más me piden. Antes pagaba un diseñador por cada pedido. Ahora tengo todo aquí."</p>
+          <div class="test-verified">Compra verificada</div>
+        </div>
+      </div>
+
+      <!-- TESTIMONIO 4 -->
+      <div class="test-card">
+        <div class="test-img-container">
+          <div class="test-img-placeholder"><span>📸</span><small>Foto testimonio</small></div>
+        </div>
+        <div class="test-content">
+          <div class="test-stars">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div class="test-name">Miguel A.</div>
+          <p class="test-txt">"Me quedé sin palabras. 45.000 diseños y todos de calidad. Mis ventas en ferias mejoraron brutalmente. Si haces sublimación, esto es obligatorio."</p>
+          <div class="test-verified">Compra verificada</div>
+        </div>
+      </div>
+    </div>
+    <p class="test-hint">← desliza para ver más →</p>
+  </div>
+
+  <div class="land-sep"></div>
+
+  <!-- ══════════════════════════════
+       SECCIÓN 6: OFERTA
+  ══════════════════════════════ -->
+  <div class="oferta-wrap" id="oferta">
+    <div class="oferta-inner">
+
+      <div class="oferta-intro">
+        <p class="oferta-intro__eyebrow">Esto es lo que te llevas hoy</p>
+        <h2 class="oferta-intro__title">Tu arsenal de diseños<br><span>está aquí</span></h2>
+        <div class="oferta-intro__divider"></div>
+        <p class="oferta-intro__quote">Un paquete tan completo que tus competidores no van a entender cómo siempre tienes lo que los clientes piden.</p>
+      </div>
+
+      <div class="oferta-num-stat">
+        <span class="oferta-num-stat__num">+500 compradores</span>
+        <span class="oferta-num-stat__dot"></span>
+        <span class="oferta-num-stat__label">ya están vendiendo</span>
+      </div>
+
+      <!-- IMAGEN OFERTA — reemplaza con mockup del producto -->
+      <div class="oferta-img-wrap">
+        <!-- <img src="TU_MOCKUP_OFERTA.jpg" alt="+45.000 Diseños Anime"> -->
+        <div class="oferta-img-placeholder">
+          <span>🗂️</span>
+          <small>Imagen del producto / mockup</small>
+        </div>
+        <div class="oferta-img-badge">+45.000 archivos</div>
+      </div>
+
+      <!-- PRECIO -->
+      <div class="oferta-price-card">
+        <h3 class="oferta-product-title">+45.000 Diseños de Anime<br><span>para Sublimar</span></h3>
+        <p class="oferta-price-old">Antes: $XX.XXX</p>
+        <div class="oferta-price-row">
+          <span class="oferta-price-currency">$</span>
+          <span class="oferta-price-new">XX.XXX</span>
+          <span class="oferta-ahorro-badge">-XX% OFF 🔥</span>
+        </div>
+        <p class="oferta-urgencia">⚡ Precio especial por tiempo limitado</p>
+        <div class="oferta-divider"></div>
+
+        <!-- COUNTDOWN -->
+        <div class="oferta-countdown-card">
+          <h4 class="oferta-countdown-headline">Oferta expira en <span id="timer-min">14</span>:<span id="timer-sec">24</span></h4>
+          <p class="oferta-countdown-sub">Cuando el contador llegue a cero, <strong>el precio sube</strong>.</p>
+          <div class="oferta-timer">
+            <div class="oferta-timer-block">
+              <span class="oferta-timer-num" id="timer-min-big">14</span>
+              <span class="oferta-timer-label">Min</span>
+            </div>
+            <span class="oferta-timer-sep">:</span>
+            <div class="oferta-timer-block">
+              <span class="oferta-timer-num" id="timer-sec-big">24</span>
+              <span class="oferta-timer-label">Seg</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- LIVE VIEWERS -->
+        <div class="oferta-viendo">
+          <span class="oferta-viendo__dot"></span>
+          <span class="oferta-viendo__text"><span class="oferta-viendo__num" id="viendo-num">23</span> personas están viendo esto ahora mismo</span>
+        </div>
+        <p class="oferta-cupos">⚠️ Acceso disponible por tiempo limitado a este precio</p>
+
+        <br>
+
+        <!-- CTA PRINCIPAL -->
+        <a href="TU_LINK_DE_PAGO" class="oferta-cta">
+          Quiero los +45.000 diseños
+          <span class="oferta-cta-arrow">
+            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </span>
+        </a>
+
+        <br><br>
+
+        <!-- GARANTIA -->
+        <div class="oferta-garantia" id="garantia-toggle">
+          <button class="oferta-garantia-trigger" onclick="toggleGarantia()">
+            <div class="oferta-garantia-left">
+              <div class="oferta-garantia-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <span class="oferta-garantia-text">🛡️ Garantía de satisfacción</span>
+            </div>
+            <svg class="oferta-garantia-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="oferta-garantia-body">
+            <div class="oferta-garantia-content">
+              <p>Si después de revisar el paquete no te convence la calidad, <strong>te devolvemos el dinero</strong>. Sin preguntas, sin complicaciones. Queremos que compres con total confianza. Tu satisfacción es nuestra prioridad.</p>
+            </div>
+          </div>
+        </div>
+
+        <br>
+
+        <!-- MELI CARD -->
+        <div class="oferta-meli">
+          <div class="meli-header">
+            <div class="meli-logo">
+              <svg viewBox="0 0 40 26" fill="none"><ellipse cx="20" cy="13" rx="19" ry="12" fill="#FFE600"/><text x="5" y="18" font-size="13" font-family="Arial" font-weight="bold" fill="#333">meli</text></svg>
+            </div>
+            <div>
+              <div class="meli-vendor-name">Vendedor oficial</div>
+              <div class="meli-vendor-status">✦ MercadoLíder</div>
+            </div>
+          </div>
+          <div class="meli-divider"></div>
+          <div class="meli-stats">
+            <div class="meli-stat">
+              <div class="meli-stat__icon-wrap">
+                <svg class="meli-stat__icon" viewBox="0 0 24 24" fill="none" stroke="#9090B8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+              </div>
+              <span class="meli-stat__num">+500</span>
+              <span class="meli-stat__label">Ventas</span>
+            </div>
+            <div class="meli-stat">
+              <div class="meli-stat__icon-wrap">
+                <svg class="meli-stat__icon" viewBox="0 0 24 24" fill="none" stroke="#9090B8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                <div class="meli-stat__check"><svg viewBox="0 0 10 10"><polyline points="2 5 4.5 7.5 8 3" stroke="#0D0D1A" fill="none" stroke-width="2" stroke-linecap="round"/></svg></div>
+              </div>
+              <span class="meli-stat__label">Buena atención</span>
+            </div>
+            <div class="meli-stat">
+              <div class="meli-stat__icon-wrap">
+                <svg class="meli-stat__icon" viewBox="0 0 24 24" fill="none" stroke="#9090B8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15.5 14"/></svg>
+                <div class="meli-stat__check"><svg viewBox="0 0 10 10"><polyline points="2 5 4.5 7.5 8 3" stroke="#0D0D1A" fill="none" stroke-width="2" stroke-linecap="round"/></svg></div>
+              </div>
+              <span class="meli-stat__label">Entrega inmediata</span>
+            </div>
+          </div>
+        </div>
+
+        <br>
+        <p class="oferta-social">Acceso inmediato · Descarga digital &nbsp;·&nbsp; Únete a <strong>+500 sublimadores</strong> que ya están vendiendo<br><span class="oferta-stars">★★★★★</span> &nbsp;<strong>4.9/5</strong></p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="land-sep"></div>
+
+  <!-- ══════════════════════════════
+       SECCIÓN 7: BONOS
+  ══════════════════════════════ -->
+  <div class="car-wrap">
+    <div class="car-header">
+      <div class="car-eyebrow">Bonos incluidos</div>
+      <h2 class="car-title">Todo lo que recibes <span>además del paquete</span></h2>
+    </div>
+
+    <div class="car-mosaic">
+      <!-- BONO 1 -->
+      <div class="car-card">
+        <div class="car-card__img">
+          <!-- <img src="BONO1.jpg" alt="Bono 1"> -->
+          <div class="car-card__img-placeholder"><span>📋</span></div>
+          <div class="car-card__badge">Bono 1</div>
+          <div class="car-card__heart">🤍</div>
+        </div>
+        <div class="car-card__body">
+          <div class="car-card__name">Guía de Series Más Vendidas 2025</div>
+          <div class="car-card__sub">Qué pedir tu cliente antes de que lo pida</div>
+          <div class="car-card__precio">
+            <span class="car-card__precio-antes">$XX.XXX</span>
+            <span class="car-card__precio-gratis">HOY GRATIS 🎁</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- BONO 2 -->
+      <div class="car-card">
+        <div class="car-card__img">
+          <div class="car-card__img-placeholder"><span>⚙️</span></div>
+          <div class="car-card__badge">Bono 2</div>
+          <div class="car-card__heart">🤍</div>
+        </div>
+        <div class="car-card__body">
+          <div class="car-card__name">Configuración Perfecta para Sublimar</div>
+          <div class="car-card__sub">Temperaturas, tiempos y materiales</div>
+          <div class="car-card__precio">
+            <span class="car-card__precio-antes">$XX.XXX</span>
+            <span class="car-card__precio-gratis">HOY GRATIS 🎁</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- BONO 3 -->
+      <div class="car-card">
+        <div class="car-card__img">
+          <div class="car-card__img-placeholder"><span>📱</span></div>
+          <div class="car-card__badge">Bono 3</div>
+          <div class="car-card__heart">🤍</div>
+        </div>
+        <div class="car-card__body">
+          <div class="car-card__name">Pack Frases para Redes Sociales</div>
+          <div class="car-card__sub">Publica y atrae clientes desde el día 1</div>
+          <div class="car-card__precio">
+            <span class="car-card__precio-antes">$XX.XXX</span>
+            <span class="car-card__precio-gratis">HOY GRATIS 🎁</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- BONO 4 -->
+      <div class="car-card">
+        <div class="car-card__img">
+          <div class="car-card__img-placeholder"><span>💰</span></div>
+          <div class="car-card__badge">Bono 4</div>
+          <div class="car-card__heart">🤍</div>
+        </div>
+        <div class="car-card__body">
+          <div class="car-card__name">Calculadora de Precios y Ganancia</div>
+          <div class="car-card__sub">Sabe exactamente cuánto cobrar</div>
+          <div class="car-card__precio">
+            <span class="car-card__precio-antes">$XX.XXX</span>
+            <span class="car-card__precio-gratis">HOY GRATIS 🎁</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- BONO 5 -->
+      <div class="car-card">
+        <div class="car-card__img">
+          <div class="car-card__img-placeholder"><span>🎯</span></div>
+          <div class="car-card__badge">Bono 5</div>
+          <div class="car-card__heart">🤍</div>
+        </div>
+        <div class="car-card__body">
+          <div class="car-card__name">Catálogo para WhatsApp y Tienda</div>
+          <div class="car-card__sub">Muestra tu catálogo de forma profesional</div>
+          <div class="car-card__precio">
+            <span class="car-card__precio-antes">$XX.XXX</span>
+            <span class="car-card__precio-gratis">HOY GRATIS 🎁</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- BONO SORPRESA -->
+      <div class="car-card car-card--sorpresa">
+        <div class="car-card__img car-card__img--sorpresa">
+          <div class="sorpresa-inner">
+            <div class="sorpresa-emoji">🎁</div>
+            <div class="sorpresa-tag">Solo por hoy</div>
+          </div>
+          <div class="car-card__badge">Bono 6</div>
+        </div>
+        <div class="car-card__body">
+          <div class="car-card__name">Bono Sorpresa Exclusivo</div>
+          <div class="car-card__sub">Se revela al completar tu compra</div>
+          <div class="car-card__precio">
+            <span class="car-card__precio-antes">$XX.XXX</span>
+            <span class="car-card__precio-gratis">HOY GRATIS 🎁</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="car-resumen">
+      <p class="car-resumen__label">Valor total de los 6 bonos:</p>
+      <span class="car-resumen__valor-antes">$XX.XXX</span>
+      <p class="car-resumen__divider">Solo por hoy</p>
+      <p class="car-resumen__gratis">GRATIS</p>
+      <p class="car-resumen__sub">Todo incluido al comprar · Acceso inmediato</p>
+    </div>
+  </div>
+
+  <div class="land-sep"></div>
+
+  <!-- ══════════════════════════════
+       SECCIÓN 8: FAQ
+  ══════════════════════════════ -->
+  <div class="faq-wrap">
+    <div class="faq-header">
+      <div class="sec-eyebrow sec-eyebrow--cyan">Preguntas frecuentes</div>
+      <h2 class="sec-title">Todo lo que<br><span class="hl-purple">necesitas saber</span></h2>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        <span class="faq-question-text">¿Cómo recibo los diseños después de la compra?</span>
+        <span class="faq-toggle"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+      </button>
+      <div class="faq-answer"><div class="faq-answer-content"><p>Tan pronto como se aprueba el pago, recibes un correo con el link de descarga. El acceso es inmediato y los archivos son tuyos para siempre. Sin esperas.</p></div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        <span class="faq-question-text">¿En qué formato vienen los diseños?</span>
+        <span class="faq-toggle"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+      </button>
+      <div class="faq-answer"><div class="faq-answer-content"><p>Los diseños vienen en PNG de alta resolución (300 DPI mínimo) con fondo transparente, listos para usar directamente en tu programa de sublimación. Compatibles con Photoshop, Canva, CorelDraw y cualquier otro programa.</p></div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        <span class="faq-question-text">¿Puedo usarlos para vender productos?</span>
+        <span class="faq-toggle"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+      </button>
+      <div class="faq-answer"><div class="faq-answer-content"><p>Sí. El paquete incluye licencia de uso comercial. Puedes sublimar los diseños en cualquier producto y venderlos libremente. No puedes revender los archivos digitales como colección.</p></div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        <span class="faq-question-text">¿Qué series y personajes incluye?</span>
+        <span class="faq-toggle"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+      </button>
+      <div class="faq-answer"><div class="faq-answer-content"><p>El paquete incluye los personajes más populares de Naruto, Dragon Ball, One Piece, Demon Slayer, Attack on Titan, My Hero Academia, Bleach, Death Note, Sword Art Online, Jujutsu Kaisen, y decenas de series más. Es el paquete más completo del mercado.</p></div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        <span class="faq-question-text">¿El pago es seguro?</span>
+        <span class="faq-toggle"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+      </button>
+      <div class="faq-answer"><div class="faq-answer-content"><p>Totalmente. Procesamos pagos a través de plataformas seguras con encriptación SSL. Tus datos están 100% protegidos. Aceptamos tarjetas de crédito, débito y transferencias.</p></div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        <span class="faq-question-text">¿Y si tengo dudas o problemas con la descarga?</span>
+        <span class="faq-toggle"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+      </button>
+      <div class="faq-answer"><div class="faq-answer-content"><p>Puedes contactarnos por WhatsApp o correo y te ayudamos de inmediato. Estamos para asegurarnos de que tengas acceso a todo desde el primer momento.</p></div></div>
+    </div>
+
+    <br><br>
+    <a href="#oferta" class="land-cta land-cta-block">Quiero los +45.000 diseños 🔥</a>
+  </div>
+
+  <div class="sticky-spacer"></div>
+
+</div><!-- /.land-wrap -->
+
+<!-- ══════════════════════════════
+     STICKY BAR
+══════════════════════════════ -->
+<div class="sticky-bar" id="sticky-bar">
+  <div class="sticky-bar__price">
+    <span class="sticky-bar__price-old">Antes: $XX.XXX</span>
+    <span class="sticky-bar__price-new">$XX.XXX</span>
+    <span class="sticky-bar__discount">-XX% HOY</span>
+  </div>
+  <a href="#oferta" class="sticky-bar__cta">Ver oferta → +45.000 Diseños</a>
+</div>
+
+
+<!-- ══════════════════════════════
+     SCRIPTS
+══════════════════════════════ -->
+<script>
+// ── COUNTDOWN TIMER ──
+(function(){
+  var DUR = 867000; // ~14 min
+  var minEls = [document.getElementById('timer-min'), document.getElementById('timer-min-big')];
+  var secEls = [document.getElementById('timer-sec'), document.getElementById('timer-sec-big')];
+  var viendo = document.getElementById('viendo-num');
+  var deadline;
+
+  function pad(n){ return n < 10 ? '0' + n : '' + n; }
+
+  function tick(){
+    var diff = Math.max(0, deadline - Date.now());
+    var secs = Math.floor(diff / 1000);
+    var m = Math.floor(secs / 60);
+    var s = secs % 60;
+    minEls.forEach(function(el){ el.textContent = pad(m); });
+    secEls.forEach(function(el){ el.textContent = pad(s); });
+    if(secs <= 60){
+      minEls.forEach(function(el){ el.style.color = '#FF2D55'; });
+      secEls.forEach(function(el){ el.style.color = '#FF2D55'; });
+    }
+    if(diff > 0) setTimeout(tick, 1000);
+  }
+
+  setTimeout(function(){
+    deadline = Date.now() + DUR;
+    tick();
+  }, 100);
+
+  // live viewers fluctuation
+  var lv = 23;
+  setInterval(function(){
+    var d = Math.floor(Math.random() * 5) - 2;
+    lv = Math.min(38, Math.max(15, lv + d));
+    viendo.style.opacity = '0';
+    setTimeout(function(){ viendo.textContent = lv; viendo.style.opacity = '1'; }, 200);
+  }, 4000);
+})();
+
+// ── GARANTIA TOGGLE ──
+window.toggleGarantia = function(){
+  document.getElementById('garantia-toggle').classList.toggle('open');
+};
+
+// ── FAQ TOGGLE ──
+(function(){
+  function toggleFaq(btn){
+    var item = btn.parentElement;
+    var isActive = item.classList.contains('active');
+    document.querySelectorAll('.faq-item').forEach(function(el){ el.classList.remove('active'); });
+    if(!isActive) item.classList.add('active');
+  }
+  window.toggleFaq = toggleFaq;
+  var first = document.querySelector('.faq-item');
+  if(first) first.classList.add('active');
+})();
+
+// ── STICKY BAR ──
+(function(){
+  var bar = document.getElementById('sticky-bar');
+  var hero = document.querySelector('.s-hero');
+  function onScroll(){
+    var heroBottom = hero.getBoundingClientRect().bottom;
+    if(heroBottom < 0){
+      bar.classList.add('visible');
+    } else {
+      bar.classList.remove('visible');
+    }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+})();
+</script>
+
+</body>
+</html>
