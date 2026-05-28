@@ -353,19 +353,62 @@
   }
   .ben-card:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(123,47,255,.2); }
   .ben-card:nth-child(even)::after { background: radial-gradient(circle at top right, rgba(255,60,172,.1), transparent 70%); }
-  .ben-icon-wrap { display: flex; flex-direction: column; align-items: center; gap: 4px; flex-shrink: 0; }
-  .ben-icon {
-    width: 44px; height: 44px; border-radius: 14px;
-    background: linear-gradient(135deg, var(--accent), #5500CC);
-    display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 4px 16px rgba(123,47,255,.4);
+  .ben-icon-wrap { display: flex; flex-direction: column; align-items: center; justify-content: center; flex-shrink: 0; }
+  .ben-emoji {
+    font-size: 28px;
+    display: inline-block;
+    transition: transform 0.3s ease;
   }
-  .ben-card:nth-child(even) .ben-icon { background: linear-gradient(135deg, var(--accent2), #CC0066); box-shadow: 0 4px 16px rgba(255,60,172,.35); }
-  .ben-icon svg { width: 20px; height: 20px; stroke: #fff; fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
-  .ben-num { font-size: 9px; font-weight: 700; color: rgba(255,255,255,.2); }
-  .ben-text { font-size: clamp(13px, 3.6vw, 15px); color: var(--text); line-height: 1.6; padding-top: 2px; }
-  .ben-text strong { color: var(--white); font-weight: 800; }
-  .ben-text em { font-style: normal; color: var(--neon); font-weight: 700; }
+  
+  /* Continuous gentle micro-animations for emojis */
+  @keyframes floatEmoji {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+  }
+  @keyframes pulseEmoji {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+  }
+  @keyframes tiltEmoji {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(10deg); }
+  }
+  @keyframes wiggleEmoji {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-8deg); }
+    75% { transform: rotate(8deg); }
+  }
+  
+  /* Apply continuous animations to emojis */
+  .ben-card:nth-child(1) .ben-emoji { animation: floatEmoji 3s ease-in-out infinite; }
+  .ben-card:nth-child(2) .ben-emoji { animation: pulseEmoji 2.5s ease-in-out infinite; filter: drop-shadow(0 0 8px rgba(0, 212, 255, 0.4)); }
+  .ben-card:nth-child(3) .ben-emoji { animation: floatEmoji 2s ease-in-out infinite; }
+  .ben-card:nth-child(4) .ben-emoji { animation: pulseEmoji 3s ease-in-out infinite; }
+  .ben-card:nth-child(5) .ben-emoji { animation: tiltEmoji 2s ease-in-out infinite; }
+  .ben-card:nth-child(6) .ben-emoji { animation: wiggleEmoji 1.5s ease-in-out infinite; }
+
+  /* Hover effect for cards */
+  .ben-card:hover .ben-emoji {
+    transform: scale(1.2) rotate(8deg);
+  }
+
+  .ben-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    text-align: left;
+  }
+  .ben-title {
+    font-size: clamp(14px, 4vw, 15.5px);
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1.35;
+  }
+  .ben-desc {
+    font-size: clamp(12px, 3.4vw, 13.5px);
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
 
   /* footer de sección con CTA */
   .sec-footer { text-align: center; margin-top: 40px; }
@@ -1100,84 +1143,70 @@
     </div>
 
     <div class="ben-grid">
+      <!-- CARD 1 -->
       <div class="ben-card">
         <div class="ben-icon-wrap">
-          <div class="ben-icon">
-            <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
-          </div>
-          <span class="ben-num">01</span>
+          <span class="ben-emoji">🎨</span>
         </div>
-        <p class="ben-text"><strong>+45.000 diseños organizados por serie.</strong> Naruto, Dragon Ball, One Piece, Demon Slayer, Attack on Titan y decenas de series más. <em>Encuentra en segundos lo que tu cliente pide.</em></p>
+        <div class="ben-content">
+          <h4 class="ben-title">Compatible con sublimación, DTF, vinilo, serigrafía y más</h4>
+          <p class="ben-desc">Funciona con CUALQUIER técnica de impresión, sin importar tu equipo.</p>
+        </div>
       </div>
 
+      <!-- CARD 2 -->
       <div class="ben-card">
         <div class="ben-icon-wrap">
-          <div class="ben-icon">
-            <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-          </div>
-          <span class="ben-num">02</span>
+          <span class="ben-emoji">💎</span>
         </div>
-        <p class="ben-text"><strong>Alta resolución garantizada: 300 DPI mínimo.</strong> Cada archivo está listo para sublimación. <em>Sin pixeles, sin bordes sucios, sin retoques.</em> Imprime directo y vende.</p>
+        <div class="ben-content">
+          <h4 class="ben-title">Alta resolución real — sin píxeles, sin bordes cortados</h4>
+          <p class="ben-desc">Cada imagen está preparada para impresión profesional. Calidad que se nota.</p>
+        </div>
       </div>
 
+      <!-- CARD 3 -->
       <div class="ben-card">
         <div class="ben-icon-wrap">
-          <div class="ben-icon">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
-          </div>
-          <span class="ben-num">03</span>
+          <span class="ben-emoji">⚡</span>
         </div>
-        <p class="ben-text">Diseños con los personajes <strong>más buscados y más vendidos del mercado.</strong> Armados pensando en lo que los compradores realmente quieren poner en su ropa, tazas y más.</p>
+        <div class="ben-content">
+          <h4 class="ben-title">Listo para usar hoy mismo — sin editar, sin perder tiempo</h4>
+          <p class="ben-desc">+45,000 archivos con fondo transparente. Descarga y empieza a vender.</p>
+        </div>
       </div>
 
+      <!-- CARD 4 -->
       <div class="ben-card">
         <div class="ben-icon-wrap">
-          <div class="ben-icon">
-            <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-          </div>
-          <span class="ben-num">04</span>
+          <span class="ben-emoji">👕</span>
         </div>
-        <p class="ben-text"><strong>Descarga inmediata.</strong> En minutos ya tienes todo en tu computadora. Sin esperas, sin formularios complicados. <em>Compras hoy, vendes hoy.</em></p>
+        <div class="ben-content">
+          <h4 class="ben-title">Ideal para camisetas, tazas, termos, mochilas, fundas y lo que imagines</h4>
+          <p class="ben-desc">Diseños versátiles que se adaptan a cualquier producto y nicho.</p>
+        </div>
       </div>
 
+      <!-- CARD 5 -->
       <div class="ben-card">
         <div class="ben-icon-wrap">
-          <div class="ben-icon">
-            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg>
-          </div>
-          <span class="ben-num">05</span>
+          <span class="ben-emoji">⏱️</span>
         </div>
-        <p class="ben-text">Formatos en <strong>PNG con fondo transparente</strong> listos para sublimación directa, además de versiones para fondo oscuro y claro. <em>Compatible con todos los programas de diseño.</em></p>
+        <div class="ben-content">
+          <h4 class="ben-title">Ahorra 500+ horas de trabajo con +45,000 personajes organizados</h4>
+          <p class="ben-desc">Todo clasificado, todo al alcance. Directo al grano.</p>
+        </div>
       </div>
 
+      <!-- CARD 6 -->
       <div class="ben-card">
         <div class="ben-icon-wrap">
-          <div class="ben-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <span class="ben-num">06</span>
+          <span class="ben-emoji">🛠️</span>
         </div>
-        <p class="ben-text"><strong>Actualizaciones incluidas.</strong> El paquete crece con el tiempo. Nuevas series, nuevos personajes, nuevas tendencias. <em>Una sola vez y tienes acceso para siempre.</em></p>
-      </div>
-
-      <div class="ben-card">
-        <div class="ben-icon-wrap">
-          <div class="ben-icon">
-            <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-          </div>
-          <span class="ben-num">07</span>
+        <div class="ben-content">
+          <h4 class="ben-title">Formatos editables incluidos — PNG, PSD, PDF, AI y más</h4>
+          <p class="ben-desc">Máxima flexibilidad para personalizar cada diseño a tu gusto.</p>
         </div>
-        <p class="ben-text">Una inversión pequeña que <strong>se recupera con la primera venta.</strong> Cada diseño te cuesta fracción de centavo. El valor es ridículo comparado con lo que generas con él.</p>
-      </div>
-
-      <div class="ben-card">
-        <div class="ben-icon-wrap">
-          <div class="ben-icon">
-            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </div>
-          <span class="ben-num">08</span>
-        </div>
-        <p class="ben-text">Ya lo usan <strong>cientos de sublimadores en toda Latinoamérica.</strong> Los que no esperan, los que venden, los que ofrecen variedad cuando su competencia no puede. <em>Sé uno de ellos.</em></p>
       </div>
     </div>
 
